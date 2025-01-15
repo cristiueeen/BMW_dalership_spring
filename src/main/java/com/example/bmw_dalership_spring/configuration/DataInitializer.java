@@ -216,7 +216,7 @@ public class DataInitializer implements CommandLineRunner {
         this.checkAndAddListing("BMW", "M4", "WBSM4VIN024", 2023, 95000.0, "0x990000",
             "Gasoline", 5000, 510, 650, "S58", "/media/m4-competition-red.jpg",
             "M Competition, carbon fiber roof", "Hamburg, Germany", "New",
-            "Carbon Fiber Package, Navigation, HUD, M Performance Exhaust, Navigation, Heated Seats");
+            "Carbon Fiber Package, Navigation, HUD, M Performance Exhaust, Heated Seats");
         this.checkAndAddListing("BMW", "530xd", "WBA530dVIN025", 2022, 63000.0, "0x333333",
             "Diesel", 11000, 286, 650, "B57", "/media/530d-xdrive.jpg",
             "xDrive AWD, luxury line package", "Frankfurt, Germany", "New",
