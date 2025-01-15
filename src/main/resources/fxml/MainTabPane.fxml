@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane fx:id="mainTabPane" tabClosingPolicy="UNAVAILABLE" prefHeight="750.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bmw_dalership_spring.controller.MainTabPaneController">
+    <tabs>
+        <Tab text="Marketplace">
+            <content>
+                <AnchorPane fx:id="marketplaceTabPane" />
+            </content>
+        </Tab>
+        <Tab text="Service Appointments">
+            <content>
+                <AnchorPane fx:id="serviceAppointmentTabPane" />
+            </content>
+        </Tab>
+        <Tab text="Vehicles">
+            <content>
+                <AnchorPane fx:id="vehicleTabPane" />
+            </content>
+        </Tab>
+        <Tab text="Dashboard">
+            <content>
+                <AnchorPane fx:id="userDashboardTabPane" />
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

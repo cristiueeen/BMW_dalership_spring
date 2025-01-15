@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bmw_dalership_spring.controller.VehicleTabController">
+    <children>
+        <Button fx:id="addVehicleButton" layoutX="50.0" layoutY="632.0" mnemonicParsing="false" onAction="#handleAddVehicle" prefHeight="63.0" prefWidth="215.0" text="Add Vehicle">
+            <font>
+                <Font name="Helvetica‭ ‬עבה" size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="removeVehicleButton" layoutX="286.0" layoutY="632.0" mnemonicParsing="false" onAction="#handleRemoveVehicle" prefHeight="63.0" prefWidth="215.0" text="Remove Vehicle">
+            <font>
+                <Font name="Helvetica‭ ‬עבה" size="18.0" />
+            </font>
+        </Button>
+        <TableView fx:id="vehicleTable" editable="true" layoutX="44.0" layoutY="71.0" onSort="#handleSort" prefHeight="361.0" prefWidth="902.0">
+            <columns>
+                <TableColumn fx:id="vehicleIdColumn" prefWidth="48.0" text="Id" />
+                <TableColumn fx:id="makeColumn" prefWidth="83.0" text="Make" />
+                <TableColumn fx:id="modelColumn" prefWidth="82.0" text="Model" />
+                <TableColumn fx:id="vinColumn" prefWidth="154.0" text="Vin" />
+                <TableColumn fx:id="engineColumn" prefWidth="89.0" text="Engine" />
+                <TableColumn fx:id="fuelColumn" prefWidth="90.0" text="Fuel" />
+                <TableColumn fx:id="powerColumn" prefWidth="75.0" text="Power" />
+                <TableColumn fx:id="torqueColumn" prefWidth="79.0" text="Torque" />
+                <TableColumn fx:id="colorColumn" prefWidth="71.0" text="Color" />
+                <TableColumn fx:id="mileageColumn" prefWidth="76.0" text="Mileage" />
+                <TableColumn fx:id="yearColumn" prefWidth="54.0" text="Year" />
+            </columns>
+        </TableView>
+        <ImageView fx:id="vehicleImage" fitHeight="361.0" fitWidth="290.0" layoutX="971.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" />
+        <GridPane fx:id="gridPane" alignment="CENTER" layoutX="50.0" layoutY="448.0" prefHeight="109.0" prefWidth="1134.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.0" minWidth="10.0" prefWidth="105.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="10.0" minHeight="0.0" prefHeight="0.0" />
+                <RowConstraints maxHeight="42.0" minHeight="0.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="88.0" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ChoiceBox fx:id="makeField" accessibleText="Make" prefWidth="150.0" GridPane.rowIndex="2" />
+                <TextField fx:id="vinField" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <ChoiceBox fx:id="engineField" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <ChoiceBox fx:id="fuelField" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <TextField fx:id="powerField" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                <TextField fx:id="torqueField" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                <ColorPicker fx:id="colorField" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                <TextField fx:id="mileageField" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                <TextField fx:id="yearField" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+                <Label alignment="CENTER" contentDisplay="CENTER" text="Make" textAlignment="CENTER" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Model" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="VIN" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Engine" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Fuel" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Power" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Torque" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Color" GridPane.columnIndex="7" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Mileage" GridPane.columnIndex="8" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Options" GridPane.columnIndex="9" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Year" GridPane.columnIndex="10" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Pictures" GridPane.columnIndex="11" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                    </font>
+                </Label>
+                <Button fx:id="selectImagesButton" mnemonicParsing="false" onAction="#handleSelectImages" prefHeight="25.0" prefWidth="90.0" text="Select Images" GridPane.columnIndex="11" GridPane.rowIndex="2" />
+            <CheckComboBox fx:id="optionsField" prefHeight="25.0" prefWidth="99.0" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+            <ChoiceBox fx:id="modelField" accessibleText="Make" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+      <Button fx:id="viewOptionsButton" layoutX="526.0" layoutY="632.0" mnemonicParsing="false" onAction="#handleViewOptions" prefHeight="63.0" prefWidth="215.0" text="Show Options">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="63.0" fitWidth="68.0" layoutX="44.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/media/solutionlogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="115.0" layoutY="24.0" text="BMW Vehicle garage">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="26.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

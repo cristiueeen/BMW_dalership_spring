@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bmw_dalership_spring.controller.MarketplaceTabController">
+   <children>
+      <ImageView fitHeight="128.0" fitWidth="124.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/media/solutionlogo.png" />
+         </image>
+      </ImageView>
+      <ListView fx:id="mainListView" layoutX="38.0" layoutY="167.0" prefHeight="516.0" prefWidth="793.0" />
+      <GridPane layoutX="159.0" layoutY="55.0" prefHeight="90.0" prefWidth="670.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <TextField fx:id="yearFromField" promptText="Year from" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" />
+                  <TextField fx:id="yearToField" prefWidth="151.0" promptText="Year to" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <TextField fx:id="mileageFromField" promptText="Mileage from" />
+                  <TextField fx:id="mileageToField" promptText="Mileage to" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <TextField fx:id="priceFromField" promptText="Price from" />
+                  <TextField fx:id="priceToField" promptText="Price to" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <TextField fx:id="powerFromField" promptText="Power from" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" />
+                  <TextField fx:id="powerToField" prefWidth="151.0" promptText="Power to" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <CheckComboBox fx:id="makeCheckComboBox" prefHeight="25.0" prefWidth="150.0" title="Make" />
+                  <CheckComboBox fx:id="modelCheckComboBox" prefHeight="25.0" prefWidth="150.0" title="Model" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <CheckComboBox fx:id="fuelCheckComboBox" prefHeight="25.0" prefWidth="260.0" title="Fuel Type" />
+               </children>
+            </HBox>
+            <Button fx:id="filterResultsButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleFilterResults" prefHeight="25.0" prefWidth="221.0" text="Filter Results" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Helvetica‭ ‬עבה" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="clearFormButton" mnemonicParsing="false" onAction="#handleClearFilters" prefHeight="25.0" prefWidth="237.0" text="Clear Filters" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Helvetica‭ ‬עבה" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <Button fx:id="sellVehicleButton" layoutX="159.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleSellVehicle" prefHeight="30.0" prefWidth="131.0" text="Sell a vehicle">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="14.0" />
+         </font>
+      </Button>
+      <VBox alignment="BASELINE_CENTER" layoutX="848.0" layoutY="58.0" prefHeight="624.0" prefWidth="418.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="185.0" fitWidth="311.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="311.0">
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="36.0" prefWidth="75.0" text="Price:">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceLabel" prefHeight="25.0" prefWidth="132.0">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="21.0" prefWidth="50.0" text="     €">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Make:">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="makeLabel" prefHeight="20.0" prefWidth="109.0">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="KMs:">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="mileageLabel" prefHeight="20.0" prefWidth="148.0">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="Engine:">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="engineLabel" prefHeight="20.0" prefWidth="130.0">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                     <children>
+                        <Label text="Torque:">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="torqueLabel" prefHeight="20.0" prefWidth="132.0">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                     <children>
+                        <Label text="VIN:">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="vinLabel" prefHeight="16.0" prefWidth="169.0" wrapText="true">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label text="Model:">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="modelLabel" prefHeight="20.0" prefWidth="152.0">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Fuel:">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="fuelLabel" prefHeight="20.0" prefWidth="158.0">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="Power:">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="powerLabel" prefHeight="20.0" prefWidth="142.0">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label text="Color:">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="colorLabel" prefHeight="20.0" prefWidth="146.0">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Label text="Condition:">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="conditionLabel" prefHeight="20.0" prefWidth="118.0">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <HBox prefHeight="195.0" prefWidth="311.0">
+               <children>
+                  <GridPane fx:id="descriptionGridPane" prefHeight="193.0" prefWidth="446.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ScrollPane fx:id="optionsScrollPane" prefHeight="200.0" prefWidth="200.0">
+                          <content>
+                            <AnchorPane fx:id="optionsAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="206.0">
+                                 <children>
+                                    <VBox fx:id="optionsVbox" prefHeight="193.0" prefWidth="209.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                        <TextArea fx:id="descriptionTextArea" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="12.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <HBox prefHeight="56.0" prefWidth="311.0">
+               <children>
+                  <GridPane fx:id="userDetailsGridPane" prefHeight="54.0" prefWidth="433.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="88.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="174.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="51.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="firstNameLabel" contentDisplay="CENTER" prefHeight="54.0" prefWidth="104.0" wrapText="true">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lastNameLabel" contentDisplay="CENTER" prefHeight="54.0" prefWidth="102.0" wrapText="true" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="emailLabel" contentDisplay="CENTER" prefHeight="54.0" prefWidth="172.0" wrapText="true" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="locationLabel" contentDisplay="CENTER" prefHeight="54.0" prefWidth="107.0" wrapText="true" GridPane.columnIndex="3">
+                           <font>
+                              <Font name="Helvetica‭ ‬עבה" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

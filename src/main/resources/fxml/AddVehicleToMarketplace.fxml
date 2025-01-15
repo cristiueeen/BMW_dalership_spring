@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bmw_dalership_spring.controller.AddVehicleController">
+   <children>
+      <Text layoutX="247.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add a vehicle to the marketplace">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="26.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="58.0" layoutY="327.0" prefHeight="337.0" prefWidth="450.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Make" textAlignment="CENTER">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="makeField" accessibleText="Make" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <Label text="Model">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="modelField" accessibleText="Make" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+               <children>
+                  <Label text="VIN">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="vinField" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Engine">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="engineField" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Fuel">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="fuelField" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Power">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="powerField" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Torque">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="torqueField" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Color">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                     </font>
+                  </Label>
+                  <ColorPicker fx:id="colorField" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Mileage">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mileageField" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
+               <children>
+                  <Label text="Options">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                     </font>
+                  </Label>
+                  <CheckComboBox fx:id="optionsField" prefHeight="25.0" prefWidth="99.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Label text="Year">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="yearField" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <children>
+                  <Label text="Pictures">
+                     <font>
+                        <Font name="Helvetica‭ ‬עבה" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="selectImagesButton" mnemonicParsing="false" onAction="#handleSelectImages" prefHeight="25.0" prefWidth="90.0" text="Select Images" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+      <Button fx:id="addExistingVehicleButton" layoutX="85.0" layoutY="643.0" mnemonicParsing="false" onAction="#handleAddExistingVehicle" prefHeight="63.0" prefWidth="215.0" text="Add existing vehicle">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="addNewVehicle" layoutX="311.0" layoutY="643.0" mnemonicParsing="false" onAction="#handleAddNewVehicle" prefHeight="63.0" prefWidth="215.0" text="Add new vehicle">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="18.0" />
+         </font>
+      </Button>
+      <ListView fx:id="mainListViewAddListing" layoutX="58.0" layoutY="60.0" prefHeight="231.0" prefWidth="450.0" />
+      <TextArea fx:id="vehicleDescriptionField" layoutX="539.0" layoutY="335.0" prefHeight="301.0" prefWidth="297.0" promptText="Write a short description about the car">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="15.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="priceTextField" layoutX="518.0" layoutY="60.0" prefHeight="50.0" prefWidth="318.0" promptText="Enter a price">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="16.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="vehicleConditionField" layoutX="518.0" layoutY="151.0" prefHeight="50.0" prefWidth="318.0" promptText="Vehicle condition" />
+      <TextField fx:id="locationTextField" layoutX="518.0" layoutY="241.0" prefHeight="50.0" prefWidth="318.0" promptText="Enter the location of the car">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="clearFormButton" layoutX="539.0" layoutY="643.0" mnemonicParsing="false" onAction="#handleClearForm" prefHeight="63.0" prefWidth="215.0" text="Clear form">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="518.0" layoutY="116.0" text="Recommended price:">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="recommendedPriceLabel" layoutX="701.0" layoutY="116.0" prefHeight="20.0" prefWidth="135.0">
+         <font>
+            <Font name="Helvetica‭ ‬עבה" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
