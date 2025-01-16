@@ -204,64 +204,71 @@ public class DataInitializer implements CommandLineRunner {
         this.checkAndAddListing("BMW", "320d", "WBA320dVIN021", 2023, 48000.0, "0x1e90ff",
             "Diesel", 15000, 190, 400, "B47", "/media/320d-silver.jpg",
             "Low mileage with premium interior", "Munich, Germany", "New",
-            "Leather Seats, Navigation, Heated Seats, Sunroof");
+            "Leather Seats, Navigation, Heated Seats, Sunroof, Heads-Up Display, Adaptive Cruise Control, Memory Seats, Ventilated Seats, Surround View Camera, Wireless Charging");
         this.checkAndAddListing("BMW", "330i", "WBA330eVIN022", 2022, 56000.0, "0xffd700",
             "Hybrid", 12000, 288, 420, "B48", "/media/330e-gold.jpg",
             "Plug-in hybrid, M-Sport trim", "Stuttgart, Germany", "New",
-            "Adaptive Cruise Control, Parking Assist, LED Headlights");
+            "Adaptive Cruise Control, Sunroof, Navigation, Backup Camera, Heated Seats, Bluetooth Connectivity");
         this.checkAndAddListing("BMW", "435i", "WBA435iVIN023", 2021, 54000.0, "0xff6347",
             "Gasoline", 20000, 306, 400, "N55", "/media/435i-red.jpg",
             "Sport Line, premium sound system", "Berlin, Germany", "Used",
-            "Heated Seats, Harman Kardon Audio, Sport Package");
+            "M Sport Package, Surround View Camera, Lane Departure Warning, Parking Sensors, Heads-Up Display, Harman Kardon Sound System");
         this.checkAndAddListing("BMW", "M4", "WBSM4VIN024", 2023, 95000.0, "0x990000",
             "Gasoline", 5000, 510, 650, "S58", "/media/m4-competition-red.jpg",
             "M Competition, carbon fiber roof", "Hamburg, Germany", "New",
-            "Carbon Fiber Package, Navigation, HUD, M Performance Exhaust, Heated Seats");
+            "Leather Seats, Panoramic Roof, Keyless Entry, Automatic Climate Control, Power Tailgate, Heated Seats");
         this.checkAndAddListing("BMW", "530xd", "WBA530dVIN025", 2022, 63000.0, "0x333333",
             "Diesel", 11000, 286, 650, "B57", "/media/530d-xdrive.jpg",
             "xDrive AWD, luxury line package", "Frankfurt, Germany", "New",
-            "Panoramic Roof, Adaptive Suspension, Heated Steering Wheel");
+            "All-Wheel Drive (xDrive), Dynamic Stability Control, Adaptive Headlights, Memory Seats, Digital Instrument Cluster, Heated Mirrors, Automatic Climate Control");
         this.checkAndAddListing("BMW", "540i", "WBA540iVIN026", 2023, 71000.0, "0x228b22",
             "Gasoline", 8000, 382, 500, "B58", "/media/540i-green.jpg",
             "Executive package with leather interior", "Düsseldorf, Germany", "New",
-            "Gesture Control, Digital Cockpit, Harman Kardon Audio");
+            "Apple CarPlay, Dynamic Stability Control, Wireless Charging, Heads-Up Display, Heated Seats, Ventilated Seats, Surround View Camera, Adaptive Cruise Control");
         this.checkAndAddListing("BMW", "750d", "WBA750dVIN027", 2023, 97000.0, "0x000000",
             "Diesel", 5000, 400, 850, "B57", "/media/750d-black.jpg",
             "Luxury edition with adaptive cruise control", "Cologne, Germany", "New",
-            "Luxury Seats, Premium Sound System, Rear Seat Entertainment");
+            "Dynamic Stability Control, Surround View Camera, Adaptive Headlights, Panoramic Roof, Ventilated Seats, Wireless Charging, Ambient Lighting");
         this.checkAndAddListing("BMW", "iX", "WBAiXXDriveVIN028", 2023, 110000.0, "0xffa500",
             "Electric", 2000, 523, 0, "Electric", "/media/ix-orange.jpg",
             "Top-tier electric SUV with dual-motor AWD", "Munich, Germany", "New",
-            "Heated Steering Wheel, Wireless Charging, Adaptive Headlights");
+            "All-Wheel Drive (xDrive), Dynamic Stability Control, Adaptive Headlights, Memory Seats, Digital Instrument Cluster");
         this.checkAndAddListing("BMW", "M5", "WBSM5VIN029", 2023, 130000.0, "0xff4500",
             "Gasoline", 4000, 627, 750, "S63", "/media/m5-competition-orange.jpg",
             "Limited edition M5 with carbon-ceramic brakes", "Berlin, Germany", "New",
-            "Carbon Roof, Adaptive Cruise Control, HUD, M Sport Differential");
+            "Soft-Close Doors, Third-Row Seating, Hill Descent Control, Heated Mirrors, Run-Flat Tires, Adaptive Cruise Control");
         this.checkAndAddListing("BMW", "X5", "WBAX5VIN030", 2022, 95000.0, "0x4682b4",
             "Diesel", 10000, 400, 760, "B57", "/media/x5-m50d-blue.jpg",
             "Premium SUV with M Performance trim", "Stuttgart, Germany", "New",
-            "360 Camera, Sport Exhaust, Adaptive Chassis");
+            "Rear-Seat Entertainment, Surround View Camera, Panoramic Roof, Adaptive Headlights, All-Wheel Drive (xDrive)");
         this.checkAndAddListing("BMW", "i4", "WBAi4eDriveVIN031", 2023, 70000.0, "0x87cefa",
             "Electric", 3000, 340, 0, "Electric", "/media/i4-blue.jpg",
             "Gran Coupe EV with adaptive damping", "Frankfurt, Germany", "New",
-            "Comfort Access, Laser Headlights, Apple CarPlay");
+            "Harman Kardon Sound System, Apple CarPlay, Android Auto, Heated Mirrors, Ventilated Seats, Wireless Charging");
         this.checkAndAddListing("BMW", "X7", "WBAX7VIN032", 2023, 120000.0, "0x696969",
             "Gasoline", 4000, 530, 750, "N63", "/media/x7-grey.jpg",
             "Luxury SUV with third-row seating", "Munich, Germany", "New",
-            "Massage Seats, Panoramic Roof, Ambient Lighting");
+            "Heated Steering Wheel, Panoramic Roof, Ambient Lighting, Hill Descent Control, Lane Departure Warning, Adaptive Cruise Control");
         this.checkAndAddListing("BMW", "218i", "WBA218iVIN033", 2021, 32000.0, "0x00ff00",
             "Gasoline", 25000, 136, 220, "B38", "/media/218i-green.jpg",
             "Compact coupe with sporty dynamics", "Berlin, Germany", "Used",
-            "Parking Assist, Cruise Control, Sport Seats");
+            "Xenon Headlights, Sports Package, Parking Sensors, Heads-Up Display, Adaptive Cruise Control, Bluetooth Connectivity");
         this.checkAndAddListing("BMW", "M2", "WBSM2VIN034", 2023, 85000.0, "0xff0000",
             "Gasoline", 6000, 450, 550, "S55", "/media/m2-cs-red.jpg",
             "Limited edition M2 Coupe", "Leipzig, Germany", "New",
-            "Carbon Package, Sport Exhaust, HUD");
+            "Power Folding Mirrors, Auto-Dimming Mirrors, CD Changer, Premium Package, Xenon Headlights");
         this.checkAndAddListing("BMW", "330d", "WBA330dVIN035", 2023, 62000.0, "0xadd8e6",
             "Diesel", 7000, 265, 580, "B57", "/media/330d-lightblue.jpg",
             "Luxury trim with sport handling", "Hamburg, Germany", "New",
-            "Heated Seats, Adaptive M Suspension, Digital Key");
-
+            "Premium Package, Harman Kardon Sound System, Digital Instrument Cluster, Heated Seats, Bluetooth Connectivity, Adaptive Cruise Control");
+        this.checkAndAddListing("Rolls-Royce", "Phantom", "WBAVU4899JE45823", 2023, 314000, "0xadd8e6",
+                "Gasoline", 25, 500, 580, "S62", "/media/1200px-2019_Rolls-Royce_Phantom_V12_Automatic_6.75.jpg",
+                "Luxury vehicle for people who want the next level of confort and style", "Hamburg, Germany", "New",
+                "Heated Seats, Digital Key, Panoramic Roof, Adaptive Cruise Control, 360 Camera, Heated Steering Wheel, Wireless Charging, Adaptive Headlights");
+        this.checkAndAddListing("Mini", "Cooper S", "WBXCV49EEEJZ3712", 2023, 35500, "0xadd8e6",
+                "Gasoline", 2000, 265, 350, "B48", "/media/images (2).jpeg",
+                "Sport handling hot hatch, made in Britain, sport body kit", "Augsburg, Germany", "New",
+                "Heated Seats, Adaptive M Suspension, Digital Key, Sports Exhaust, Apple CarPlay, Android Auto, Parking Sensors");
     }
     public void checkAndAddListing(
             String make, String model, String vin, int year, double price, String color,

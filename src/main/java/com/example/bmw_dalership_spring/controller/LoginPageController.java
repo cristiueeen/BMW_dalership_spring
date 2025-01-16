@@ -71,7 +71,7 @@ public class LoginPageController extends BaseController{
     void handleSupervisorMode(ActionEvent event) {
 
         emailAddressField.setText("contact@bmw.com");
-        showAlert(AlertType.INFORMATION, "Supervisor Mode", "Supervisor mode activated, you may use the classic, very secure pass for a admin account.");
+        showAlert(AlertType.INFORMATION, "Supervisor Mode", "Supervisor mode activated, password is 'admin'");
     }
 
     @FXML
@@ -82,8 +82,7 @@ public class LoginPageController extends BaseController{
 
     @FXML
     private void initialize() {
-
-
+        emailAddressField.setPromptText("for quick test purposes, click supervisor mode");
     }
 
 }
